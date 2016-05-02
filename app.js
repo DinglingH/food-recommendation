@@ -33,12 +33,10 @@ function buildComplete(){
 
 function buildRecommendation(){
   numOfTasksBuild++;
-  console.log('before db each');
+  //Fetch active users and do recommendations for them
   db.each('select distinct UserId from training_reviews', function (err, row) {
     numOfTasksBuild++;
-    console.dir(row);
     raccoon.recommendFor(row.UserId, 5, function (results) {
-      console.dir(results);
       //create json object
       var params = {
         index: 'affindex',     //amazon fine food index
