@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
+    "elasticsearch": "^11.0.1",
     "raccoon": "^0.2.3",
     "sqlite3": "^3.1.3"
   }

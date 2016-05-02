@@ -21,11 +21,10 @@ Definition of 'active user': user who have wrote reviews for more than **20** pr
 And we will only build recommendations for these active users.
 
 ### Models & Algorithms
-Many libraries offer Collaborative Filtering Algorithm implementation. The library likely.js is tried first. And it uses matrix factorization. When the row or column gets more than 1000 elements, the program will run out of memory. So raccoon.js is implemented finally. It works fine for 10,000 of training reocords. Here are basic features of the algorithm:
+Many libraries offer Collaborative Filtering Algorithm implementation. The library likely.js is tried first. And it uses matrix factorization. When the row or column gets more than 1,000 elements, the program will run out of memory. So raccoon.js is implemented finally. It works fine for 10,000 of training reocords using Redis. Here are basic features of the algorithm:
   * Jaccard Coefficient for Similarity
   * K-Nearest Neighbors Algorithm for Recommendations
   * Wilson Score Confidence Interval for a Bernoulli Parameter
-  * Redis  
 
 ### Result
 Recommendations for all active users are saved in Elasticsearch.
